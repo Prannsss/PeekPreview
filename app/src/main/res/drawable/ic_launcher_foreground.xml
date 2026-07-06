@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A speech bubble with a magnifier dot = "peek at a message". Kept inside the
+     66dp adaptive-icon safe zone (centered in the 108 viewport). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,32h32a10,10 0 0 1 10,10v18a10,10 0 0 1 -10,10h-16l-12,10v-10h-4a10,10 0 0 1 -10,-10v-18a10,10 0 0 1 10,-10z" />
+    <path
+        android:fillColor="#4C5BD4"
+        android:pathData="M54,44m-7,0a7,7 0 1 0 14,0a7,7 0 1 0 -14,0" />
+</vector>

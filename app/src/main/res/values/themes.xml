@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base app theme. Compose owns the real theming (see ui/theme/Theme.kt);
+         this only needs to be a Material 3 shell so the splash/window are sane.
+         NoActionBar because Compose draws its own top bar / edge-to-edge. -->
+    <style name="Theme.PeekPreview" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PeekPreview</string>
+
+    <string name="accessibility_service_label">PeekPreview</string>
+
+    <!-- Written as if it needed to pass Play review, per good practice. This is
+         the text the user sees on the "Use PeekPreview?" accessibility dialog. -->
+    <string name="accessibility_service_description">PeekPreview shows a floating preview of a conversation when you long-press it in Google Messages, Facebook Messenger, or Instagram Direct, so you can read a message without opening the chat.\n\nTo do this, PeekPreview needs to read the on-screen text of the row you long-press. It only reads text in response to your long-press action — it does not record, log, or transmit your messages, and nothing leaves your device. You can turn it off any time from the app or from Accessibility settings.</string>
+
+    <!-- Home screen -->
+    <string name="home_title">PeekPreview</string>
+    <string name="toggle_label">Peek Preview</string>
+    <string name="toggle_description">Long-press a conversation to preview it, right from your messages list — without opening the chat.</string>
+    <string name="apps_header">Apps</string>
+    <string name="apps_subhead">Choose which apps peek is active in. The master switch above turns all of them on or off.</string>
+    <string name="notice_text">Preview quality may vary between apps — Google Messages tends to work most reliably; Messenger and Instagram previews depend on what each app exposes and may occasionally show partial or no text.</string>
+    <string name="notice_dismiss">Got it</string>
+    <string name="developer_header">Developer</string>
+    <string name="debug_logging_label">Log node tree to Logcat</string>
+    <string name="debug_logging_desc">On long-press, dump the full accessibility tree under tag \"PeekPreview\" so you can tune extraction for Messenger/Instagram.</string>
+    <string name="permissions_header">Permissions</string>
+    <string name="perm_missing_helper">Grant the permissions below to enable Peek Preview.</string>
+
+    <string name="perm_accessibility">Accessibility Service</string>
+    <string name="perm_overlay">Display over other apps</string>
+    <string name="perm_notifications">Notifications</string>
+    <string name="fix">Fix</string>
+    <string name="granted">Granted</string>
+    <string name="not_granted">Not granted</string>
+
+    <!-- Overlay / notification -->
+    <string name="fg_notification_channel">PeekPreview status</string>
+    <string name="fg_notification_title">PeekPreview is running</string>
+    <string name="fg_notification_text">Long-press a conversation to peek.</string>
+    <string name="fg_notification_turn_off">Turn off</string>
+</resources>

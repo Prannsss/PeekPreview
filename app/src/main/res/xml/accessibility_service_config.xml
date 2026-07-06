@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Accessibility service config.
+
+    accessibilityEventTypes: we listen for a *narrow* set rather than
+    typeAllMask. Narrowing matters because onAccessibilityEvent is a hot path;
+    typeAllMask means the system wakes us for every text change, scroll, and
+    focus event across the target app, which is wasteful and makes the service
+    feel heavier to the battery/perf teams (and to review). We keep:
+      - typeViewLongClicked          -> the ideal "peek" trigger
+      - typeViewAccessibilityFocused -> fallback trigger (see the service)
+      - typeWindowContentChanged     -> lets us detect the row leaving screen
+                                        so we can auto-dismiss the bubble
+    Tradeoff: narrower = we might miss a device/app combo that fires some other
+    event on long-press. If a target app doesn't cooperate, widen this here.
+
+    packageNames: locked to Google Messages for now. To support more apps later,
+    remove this attribute entirely (listen to all apps) OR set it dynamically at
+    runtime via AccessibilityServiceInfo.packageNames on the live service — that
+    lets a settings screen offer a user-editable target list without shipping a
+    new APK.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeViewLongClicked|typeViewAccessibilityFocused|typeWindowContentChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRetrieveInteractiveWindows|flagReportViewIds"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/accessibility_service_description"
+    android:notificationTimeout="100"
+    android:packageNames="com.google.android.apps.messaging,com.facebook.orca,com.instagram.android"
+    android:settingsActivity="com.peekpreview.MainActivity" />
