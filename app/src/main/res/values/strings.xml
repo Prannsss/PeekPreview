@@ -5,7 +5,7 @@
 
     <!-- Written as if it needed to pass Play review, per good practice. This is
          the text the user sees on the "Use PeekPreview?" accessibility dialog. -->
-    <string name="accessibility_service_description">PeekPreview shows a floating preview of a conversation when you long-press it in Google Messages, Facebook Messenger, or Instagram Direct, so you can read a message without opening the chat.\n\nTo do this, PeekPreview needs to read the on-screen text of the row you long-press. It only reads text in response to your long-press action — it does not record, log, or transmit your messages, and nothing leaves your device. You can turn it off any time from the app or from Accessibility settings.</string>
+    <string name="accessibility_service_description">PeekPreview shows a floating preview of a conversation when you long-press it in Facebook Messenger or Instagram Direct, so you can read a message without opening the chat.\n\nTo do this, PeekPreview needs to read the on-screen text of the row you long-press. It only reads text in response to your long-press action — it does not record, log, or transmit your messages, and nothing leaves your device. You can turn it off any time from the app or from Accessibility settings.</string>
 
     <!-- Home screen -->
     <string name="home_title">PeekPreview</string>
@@ -13,7 +13,7 @@
     <string name="toggle_description">Long-press a conversation to preview it, right from your messages list — without opening the chat.</string>
     <string name="apps_header">Apps</string>
     <string name="apps_subhead">Choose which apps peek is active in. The master switch above turns all of them on or off.</string>
-    <string name="notice_text">Preview quality may vary between apps — Google Messages tends to work most reliably; Messenger and Instagram previews depend on what each app exposes and may occasionally show partial or no text.</string>
+    <string name="notice_text">Preview quality may vary between apps — Messenger and Instagram previews depend on what each app exposes in its conversation list, and may occasionally show partial or no text.</string>
     <string name="notice_dismiss">Got it</string>
     <string name="developer_header">Developer</string>
     <string name="debug_logging_label">Log node tree to Logcat</string>

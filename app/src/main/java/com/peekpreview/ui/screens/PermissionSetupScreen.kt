@@ -60,15 +60,15 @@ fun PermissionSetupScreen(
             icon = Icons.Filled.Accessibility,
             title = "Read the row you long-press",
             body = "PeekPreview uses an Accessibility Service to read the text of the " +
-                "conversation you long-press in Google Messages, Facebook Messenger, or " +
-                "Instagram Direct — only in response to that long-press. It does not log " +
-                "or send your messages anywhere; nothing leaves your device.",
+                "conversation you long-press in Facebook Messenger or Instagram Direct — " +
+                "only in response to that long-press. It does not log or send your " +
+                "messages anywhere; nothing leaves your device.",
             actionLabel = "Open Accessibility settings",
         ),
         OnboardingStep(
             icon = Icons.Filled.Layers,
             title = "Draw the peek bubble",
-            body = "To float the preview on top of Google Messages, PeekPreview needs " +
+            body = "To float the preview on top of Messenger or Instagram, PeekPreview needs " +
                 "permission to display over other apps.",
             actionLabel = "Allow display over apps",
         ),

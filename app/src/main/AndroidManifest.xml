@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Draw the peek bubble on top of Google Messages. -->
+    <!-- Draw the peek overlay on top of Messenger / Instagram. -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <!-- Persistent "PeekPreview is running" notification (runtime-granted on 13+). -->

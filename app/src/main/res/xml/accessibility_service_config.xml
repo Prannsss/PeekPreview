@@ -9,23 +9,22 @@
     feel heavier to the battery/perf teams (and to review). We keep:
       - typeViewLongClicked          -> the ideal "peek" trigger
       - typeViewAccessibilityFocused -> fallback trigger (see the service)
-      - typeWindowContentChanged     -> lets us detect the row leaving screen
-                                        so we can auto-dismiss the bubble
     Tradeoff: narrower = we might miss a device/app combo that fires some other
     event on long-press. If a target app doesn't cooperate, widen this here.
 
-    packageNames: locked to Google Messages for now. To support more apps later,
-    remove this attribute entirely (listen to all apps) OR set it dynamically at
-    runtime via AccessibilityServiceInfo.packageNames on the live service — that
-    lets a settings screen offer a user-editable target list without shipping a
-    new APK.
+    packageNames: Messenger + Instagram only for now (Google Messages temporarily
+    dropped). To support more apps, add them here and to SUPPORTED_APPS.
+
+    canPerformGestures: we tap the row's screen position to open the chat for
+    real after a peek, so the service needs gesture dispatch.
 -->
 <accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
-    android:accessibilityEventTypes="typeViewLongClicked|typeViewAccessibilityFocused|typeWindowContentChanged"
+    android:accessibilityEventTypes="typeViewLongClicked|typeViewAccessibilityFocused"
     android:accessibilityFeedbackType="feedbackGeneric"
     android:accessibilityFlags="flagRetrieveInteractiveWindows|flagReportViewIds"
+    android:canPerformGestures="true"
     android:canRetrieveWindowContent="true"
     android:description="@string/accessibility_service_description"
     android:notificationTimeout="100"
-    android:packageNames="com.google.android.apps.messaging,com.facebook.orca,com.instagram.android"
+    android:packageNames="com.facebook.orca,com.instagram.android"
     android:settingsActivity="com.peekpreview.MainActivity" />

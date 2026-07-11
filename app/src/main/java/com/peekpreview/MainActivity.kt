@@ -7,7 +7,9 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
@@ -41,10 +43,15 @@ class MainActivity : ComponentActivity() {
         setContent {
             PeekPreviewTheme {
                 Surface(
+                    // The Surface itself stays edge-to-edge so the theme background
+                    // paints behind the status/nav bars (dark in dark mode); only the
+                    // CONTENT is inset clear of them.
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    PeekApp()
+                    Box(Modifier.safeDrawingPadding()) {
+                        PeekApp()
+                    }
                 }
             }
         }

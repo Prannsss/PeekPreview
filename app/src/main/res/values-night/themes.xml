@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark-mode shell so the launch window / anything behind Compose is dark,
+         matching the Compose dark theme (see values/themes.xml for the light one). -->
+    <style name="Theme.PeekPreview" parent="android:Theme.Material.NoActionBar" />
+</resources>
